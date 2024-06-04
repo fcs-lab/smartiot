@@ -1,0 +1,24 @@
+{
+  "smartiotApp": {
+    "vehicleSubStatus": {
+      "home": {
+        "title": "Vehicle Sub Statuses",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Vehicle Sub Status",
+        "createOrEditLabel": "Create or edit a Vehicle Sub Status",
+        "notFound": "No Vehicle Sub Statuses found"
+      },
+      "created": "A new Vehicle Sub Status is created with identifier {{ param }}",
+      "updated": "A Vehicle Sub Status is updated with identifier {{ param }}",
+      "deleted": "A Vehicle Sub Status is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Vehicle Sub Status {{ id }}?"
+      },
+      "detail": {
+        "title": "Vehicle Sub Status"
+      },
+      "id": "ID",
+      "subStatusName": "Sub Status Name"
+    }
+  }
+}

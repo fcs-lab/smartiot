@@ -1,0 +1,25 @@
+{
+  "annotations": {
+    "changelogDate": "20240604023203"
+  },
+  "applications": ["smartiot"],
+  "dto": "mapstruct",
+  "fields": [
+    {
+      "fieldName": "statusChangeDate",
+      "fieldType": "Instant",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "newStatus",
+      "fieldType": "VehicleStatus",
+      "fieldValidateRules": ["required"],
+      "fieldValues": "AVAILABLE,MAINTENANCE,OUT_OF_SERVICE"
+    }
+  ],
+  "name": "VehicleStatusLog",
+  "pagination": "pagination",
+  "relationships": [],
+  "searchEngine": "no",
+  "service": "serviceClass"
+}

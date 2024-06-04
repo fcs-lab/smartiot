@@ -1,0 +1,26 @@
+{
+  "smartiotApp": {
+    "geoLocation": {
+      "home": {
+        "title": "Geo Locations",
+        "refreshListLabel": "Atualizar lista",
+        "createLabel": "Criar novo Geo Location",
+        "createOrEditLabel": "Criar ou editar Geo Location",
+        "notFound": "Nenhum Geo Location encontrado"
+      },
+      "created": "Um novo Geo Location foi criado com o identificador {{ param }}",
+      "updated": "Um Geo Location foi atualizado com o identificador {{ param }}",
+      "deleted": "Um Geo Location foi excluído com o identificador {{ param }}",
+      "delete": {
+        "question": "Tem certeza de que deseja excluir Geo Location {{ id }}?"
+      },
+      "detail": {
+        "title": "Geo Location"
+      },
+      "id": "ID",
+      "latitude": "Latitude",
+      "longitude": "Longitude",
+      "fullAddress": "Full Address"
+    }
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "annotations": {
+    "changelogDate": "20240604023150"
+  },
+  "applications": ["smartiot"],
+  "dto": "mapstruct",
+  "fields": [
+    {
+      "fieldName": "createdAt",
+      "fieldType": "Instant",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "updatedAt",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "alertDescription",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "alertType",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    }
+  ],
+  "name": "SystemAlert",
+  "pagination": "pagination",
+  "relationships": [
+    {
+      "otherEntityName": "vehicleInfo",
+      "otherEntityRelationshipName": "alerts",
+      "relationshipName": "vehicle",
+      "relationshipSide": "right",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "searchEngine": "no",
+  "service": "serviceClass"
+}

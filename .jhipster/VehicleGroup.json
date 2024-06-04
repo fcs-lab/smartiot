@@ -1,0 +1,23 @@
+{
+  "annotations": {
+    "changelogDate": "20240604023158"
+  },
+  "applications": ["smartiot"],
+  "dto": "mapstruct",
+  "fields": [
+    {
+      "fieldName": "groupName",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "groupDescription",
+      "fieldType": "String"
+    }
+  ],
+  "name": "VehicleGroup",
+  "pagination": "pagination",
+  "relationships": [],
+  "searchEngine": "no",
+  "service": "serviceClass"
+}

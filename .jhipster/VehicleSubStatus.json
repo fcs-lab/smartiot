@@ -1,0 +1,19 @@
+{
+  "annotations": {
+    "changelogDate": "20240604023204"
+  },
+  "applications": ["smartiot"],
+  "dto": "mapstruct",
+  "fields": [
+    {
+      "fieldName": "subStatusName",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    }
+  ],
+  "name": "VehicleSubStatus",
+  "pagination": "pagination",
+  "relationships": [],
+  "searchEngine": "no",
+  "service": "serviceClass"
+}

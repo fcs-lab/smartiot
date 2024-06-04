@@ -1,0 +1,27 @@
+{
+  "smartiotApp": {
+    "vehicleService": {
+      "home": {
+        "title": "Vehicle Services",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Vehicle Service",
+        "createOrEditLabel": "Create or edit a Vehicle Service",
+        "notFound": "No Vehicle Services found"
+      },
+      "created": "A new Vehicle Service is created with identifier {{ param }}",
+      "updated": "A Vehicle Service is updated with identifier {{ param }}",
+      "deleted": "A Vehicle Service is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Vehicle Service {{ id }}?"
+      },
+      "detail": {
+        "title": "Vehicle Service"
+      },
+      "id": "ID",
+      "serviceName": "Service Name",
+      "serviceDate": "Service Date",
+      "serviceDescription": "Service Description",
+      "vehicle": "Vehicle"
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "smartiotApp": {
+    "userRole": {
+      "home": {
+        "title": "User Roles",
+        "refreshListLabel": "Atualizar lista",
+        "createLabel": "Criar novo User Role",
+        "createOrEditLabel": "Criar ou editar User Role",
+        "notFound": "Nenhum User Role encontrado"
+      },
+      "created": "Um novo User Role foi criado com o identificador {{ param }}",
+      "updated": "Um User Role foi atualizado com o identificador {{ param }}",
+      "deleted": "Um User Role foi excluído com o identificador {{ param }}",
+      "delete": {
+        "question": "Tem certeza de que deseja excluir User Role {{ id }}?"
+      },
+      "detail": {
+        "title": "User Role"
+      },
+      "id": "ID",
+      "roleName": "Role Name"
+    }
+  }
+}

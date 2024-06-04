@@ -1,0 +1,28 @@
+{
+  "annotations": {
+    "changelogDate": "20240604023206"
+  },
+  "applications": ["smartiot"],
+  "dto": "mapstruct",
+  "fields": [
+    {
+      "fieldName": "measurementDate",
+      "fieldType": "Instant",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "waterLevel",
+      "fieldType": "Float",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "waterQuality",
+      "fieldType": "String"
+    }
+  ],
+  "name": "WaterMeasurement",
+  "pagination": "pagination",
+  "relationships": [],
+  "searchEngine": "no",
+  "service": "serviceClass"
+}

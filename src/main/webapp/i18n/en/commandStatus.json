@@ -1,0 +1,10 @@
+{
+  "smartiotApp": {
+    "CommandStatus": {
+      "null": "",
+      "PENDING": "PENDING",
+      "EXECUTED": "EXECUTED",
+      "FAILED": "FAILED"
+    }
+  }
+}

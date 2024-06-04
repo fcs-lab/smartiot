@@ -1,0 +1,26 @@
+{
+  "smartiotApp": {
+    "waterAlert": {
+      "home": {
+        "title": "Water Alerts",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Water Alert",
+        "createOrEditLabel": "Create or edit a Water Alert",
+        "notFound": "No Water Alerts found"
+      },
+      "created": "A new Water Alert is created with identifier {{ param }}",
+      "updated": "A Water Alert is updated with identifier {{ param }}",
+      "deleted": "A Water Alert is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Water Alert {{ id }}?"
+      },
+      "detail": {
+        "title": "Water Alert"
+      },
+      "id": "ID",
+      "alertType": "Alert Type",
+      "alertDescription": "Alert Description",
+      "createdDate": "Created Date"
+    }
+  }
+}

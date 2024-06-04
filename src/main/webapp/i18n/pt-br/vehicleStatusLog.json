@@ -1,0 +1,25 @@
+{
+  "smartiotApp": {
+    "vehicleStatusLog": {
+      "home": {
+        "title": "Vehicle Status Logs",
+        "refreshListLabel": "Atualizar lista",
+        "createLabel": "Criar novo Vehicle Status Log",
+        "createOrEditLabel": "Criar ou editar Vehicle Status Log",
+        "notFound": "Nenhum Vehicle Status Log encontrado"
+      },
+      "created": "Um novo Vehicle Status Log foi criado com o identificador {{ param }}",
+      "updated": "Um Vehicle Status Log foi atualizado com o identificador {{ param }}",
+      "deleted": "Um Vehicle Status Log foi excluído com o identificador {{ param }}",
+      "delete": {
+        "question": "Tem certeza de que deseja excluir Vehicle Status Log {{ id }}?"
+      },
+      "detail": {
+        "title": "Vehicle Status Log"
+      },
+      "id": "ID",
+      "statusChangeDate": "Status Change Date",
+      "newStatus": "New Status"
+    }
+  }
+}

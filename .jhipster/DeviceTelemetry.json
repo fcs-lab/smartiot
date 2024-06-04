@@ -1,0 +1,41 @@
+{
+  "annotations": {
+    "changelogDate": "20240604023137"
+  },
+  "applications": ["smartiot"],
+  "dto": "mapstruct",
+  "fields": [
+    {
+      "fieldName": "telemetryTimestamp",
+      "fieldType": "Instant",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "latitude",
+      "fieldType": "Double",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "longitude",
+      "fieldType": "Double",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "speed",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "fuelLevel",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "engineStatus",
+      "fieldType": "String"
+    }
+  ],
+  "name": "DeviceTelemetry",
+  "pagination": "pagination",
+  "relationships": [],
+  "searchEngine": "no",
+  "service": "serviceClass"
+}

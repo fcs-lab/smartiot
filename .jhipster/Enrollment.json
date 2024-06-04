@@ -1,0 +1,32 @@
+{
+  "annotations": {
+    "changelogDate": "20240604023138"
+  },
+  "applications": ["smartiot"],
+  "dto": "mapstruct",
+  "fields": [
+    {
+      "fieldName": "enrollmentType",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "enrollmentDate",
+      "fieldType": "ZonedDateTime",
+      "fieldValidateRules": ["required"]
+    }
+  ],
+  "name": "Enrollment",
+  "pagination": "pagination",
+  "relationships": [
+    {
+      "otherEntityName": "measurement",
+      "otherEntityRelationshipName": "enrollment",
+      "relationshipName": "measurement",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-many"
+    }
+  ],
+  "searchEngine": "no",
+  "service": "serviceClass"
+}

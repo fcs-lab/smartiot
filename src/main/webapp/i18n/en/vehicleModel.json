@@ -1,0 +1,24 @@
+{
+  "smartiotApp": {
+    "vehicleModel": {
+      "home": {
+        "title": "Vehicle Models",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Vehicle Model",
+        "createOrEditLabel": "Create or edit a Vehicle Model",
+        "notFound": "No Vehicle Models found"
+      },
+      "created": "A new Vehicle Model is created with identifier {{ param }}",
+      "updated": "A Vehicle Model is updated with identifier {{ param }}",
+      "deleted": "A Vehicle Model is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Vehicle Model {{ id }}?"
+      },
+      "detail": {
+        "title": "Vehicle Model"
+      },
+      "id": "ID",
+      "modelName": "Model Name"
+    }
+  }
+}

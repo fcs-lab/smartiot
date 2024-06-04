@@ -1,0 +1,29 @@
+{
+  "smartiotApp": {
+    "carRide": {
+      "home": {
+        "title": "Car Rides",
+        "refreshListLabel": "Atualizar lista",
+        "createLabel": "Criar novo Car Ride",
+        "createOrEditLabel": "Criar ou editar Car Ride",
+        "notFound": "Nenhum Car Ride encontrado"
+      },
+      "created": "Um novo Car Ride foi criado com o identificador {{ param }}",
+      "updated": "Um Car Ride foi atualizado com o identificador {{ param }}",
+      "deleted": "Um Car Ride foi excluído com o identificador {{ param }}",
+      "delete": {
+        "question": "Tem certeza de que deseja excluir Car Ride {{ id }}?"
+      },
+      "detail": {
+        "title": "Car Ride"
+      },
+      "id": "ID",
+      "startTime": "Start Time",
+      "endTime": "End Time",
+      "origin": "Origin",
+      "destination": "Destination",
+      "availableSeats": "Available Seats",
+      "driver": "Driver"
+    }
+  }
+}

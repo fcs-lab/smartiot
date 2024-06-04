@@ -1,0 +1,25 @@
+{
+  "smartiotApp": {
+    "userDashboard": {
+      "home": {
+        "title": "User Dashboards",
+        "refreshListLabel": "Atualizar lista",
+        "createLabel": "Criar novo User Dashboard",
+        "createOrEditLabel": "Criar ou editar User Dashboard",
+        "notFound": "Nenhum User Dashboard encontrado"
+      },
+      "created": "Um novo User Dashboard foi criado com o identificador {{ param }}",
+      "updated": "Um User Dashboard foi atualizado com o identificador {{ param }}",
+      "deleted": "Um User Dashboard foi excluído com o identificador {{ param }}",
+      "delete": {
+        "question": "Tem certeza de que deseja excluir User Dashboard {{ id }}?"
+      },
+      "detail": {
+        "title": "User Dashboard"
+      },
+      "id": "ID",
+      "dashboardName": "Dashboard Name",
+      "widgets": "Widgets"
+    }
+  }
+}

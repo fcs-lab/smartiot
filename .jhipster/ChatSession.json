@@ -1,0 +1,36 @@
+{
+  "annotations": {
+    "changelogDate": "20240604023128"
+  },
+  "applications": ["smartiot"],
+  "dto": "mapstruct",
+  "fields": [
+    {
+      "fieldName": "sessionId",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "startTime",
+      "fieldType": "Instant",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "endTime",
+      "fieldType": "Instant"
+    }
+  ],
+  "name": "ChatSession",
+  "pagination": "pagination",
+  "relationships": [
+    {
+      "otherEntityName": "chatMessage",
+      "otherEntityRelationshipName": "chatSession",
+      "relationshipName": "messages",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-many"
+    }
+  ],
+  "searchEngine": "no",
+  "service": "serviceClass"
+}

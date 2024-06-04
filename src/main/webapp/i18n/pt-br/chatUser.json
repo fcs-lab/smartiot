@@ -1,0 +1,25 @@
+{
+  "smartiotApp": {
+    "chatUser": {
+      "home": {
+        "title": "Chat Users",
+        "refreshListLabel": "Atualizar lista",
+        "createLabel": "Criar novo Chat User",
+        "createOrEditLabel": "Criar ou editar Chat User",
+        "notFound": "Nenhum Chat User encontrado"
+      },
+      "created": "Um novo Chat User foi criado com o identificador {{ param }}",
+      "updated": "Um Chat User foi atualizado com o identificador {{ param }}",
+      "deleted": "Um Chat User foi excluído com o identificador {{ param }}",
+      "delete": {
+        "question": "Tem certeza de que deseja excluir Chat User {{ id }}?"
+      },
+      "detail": {
+        "title": "Chat User"
+      },
+      "id": "ID",
+      "userId": "User Id",
+      "userName": "User Name"
+    }
+  }
+}

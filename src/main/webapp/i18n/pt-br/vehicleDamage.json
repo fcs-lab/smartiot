@@ -1,0 +1,27 @@
+{
+  "smartiotApp": {
+    "vehicleDamage": {
+      "home": {
+        "title": "Vehicle Damages",
+        "refreshListLabel": "Atualizar lista",
+        "createLabel": "Criar novo Vehicle Damage",
+        "createOrEditLabel": "Criar ou editar Vehicle Damage",
+        "notFound": "Nenhum Vehicle Damage encontrado"
+      },
+      "created": "Um novo Vehicle Damage foi criado com o identificador {{ param }}",
+      "updated": "Um Vehicle Damage foi atualizado com o identificador {{ param }}",
+      "deleted": "Um Vehicle Damage foi excluído com o identificador {{ param }}",
+      "delete": {
+        "question": "Tem certeza de que deseja excluir Vehicle Damage {{ id }}?"
+      },
+      "detail": {
+        "title": "Vehicle Damage"
+      },
+      "id": "ID",
+      "damageDescription": "Damage Description",
+      "reportedAt": "Reported At",
+      "damageStatus": "Damage Status",
+      "vehicle": "Vehicle"
+    }
+  }
+}

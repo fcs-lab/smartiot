@@ -1,0 +1,25 @@
+{
+  "smartiotApp": {
+    "vehicleManufacturer": {
+      "home": {
+        "title": "Vehicle Manufacturers",
+        "refreshListLabel": "Atualizar lista",
+        "createLabel": "Criar novo Vehicle Manufacturer",
+        "createOrEditLabel": "Criar ou editar Vehicle Manufacturer",
+        "notFound": "Nenhum Vehicle Manufacturer encontrado"
+      },
+      "created": "Um novo Vehicle Manufacturer foi criado com o identificador {{ param }}",
+      "updated": "Um Vehicle Manufacturer foi atualizado com o identificador {{ param }}",
+      "deleted": "Um Vehicle Manufacturer foi excluído com o identificador {{ param }}",
+      "delete": {
+        "question": "Tem certeza de que deseja excluir Vehicle Manufacturer {{ id }}?"
+      },
+      "detail": {
+        "title": "Vehicle Manufacturer"
+      },
+      "id": "ID",
+      "manufacturerName": "Manufacturer Name",
+      "manufacturerCountry": "Manufacturer Country"
+    }
+  }
+}

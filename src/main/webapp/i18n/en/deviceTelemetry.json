@@ -1,0 +1,29 @@
+{
+  "smartiotApp": {
+    "deviceTelemetry": {
+      "home": {
+        "title": "Device Telemetries",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Device Telemetry",
+        "createOrEditLabel": "Create or edit a Device Telemetry",
+        "notFound": "No Device Telemetries found"
+      },
+      "created": "A new Device Telemetry is created with identifier {{ param }}",
+      "updated": "A Device Telemetry is updated with identifier {{ param }}",
+      "deleted": "A Device Telemetry is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Device Telemetry {{ id }}?"
+      },
+      "detail": {
+        "title": "Device Telemetry"
+      },
+      "id": "ID",
+      "telemetryTimestamp": "Telemetry Timestamp",
+      "latitude": "Latitude",
+      "longitude": "Longitude",
+      "speed": "Speed",
+      "fuelLevel": "Fuel Level",
+      "engineStatus": "Engine Status"
+    }
+  }
+}

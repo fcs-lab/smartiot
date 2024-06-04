@@ -1,0 +1,28 @@
+{
+  "smartiotApp": {
+    "chatMessage": {
+      "home": {
+        "title": "Chat Messages",
+        "refreshListLabel": "Atualizar lista",
+        "createLabel": "Criar novo Chat Message",
+        "createOrEditLabel": "Criar ou editar Chat Message",
+        "notFound": "Nenhum Chat Message encontrado"
+      },
+      "created": "Um novo Chat Message foi criado com o identificador {{ param }}",
+      "updated": "Um Chat Message foi atualizado com o identificador {{ param }}",
+      "deleted": "Um Chat Message foi excluído com o identificador {{ param }}",
+      "delete": {
+        "question": "Tem certeza de que deseja excluir Chat Message {{ id }}?"
+      },
+      "detail": {
+        "title": "Chat Message"
+      },
+      "id": "ID",
+      "messageId": "Message Id",
+      "messageContent": "Message Content",
+      "messageTimestamp": "Message Timestamp",
+      "sender": "Sender",
+      "chatSession": "Chat Session"
+    }
+  }
+}

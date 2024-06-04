@@ -1,0 +1,68 @@
+{
+  "annotations": {
+    "changelogDate": "20240604023159"
+  },
+  "applications": ["smartiot"],
+  "dto": "mapstruct",
+  "fields": [
+    {
+      "fieldName": "modelName",
+      "fieldType": "String",
+      "fieldValidateRules": ["required", "maxlength"],
+      "fieldValidateRulesMaxlength": "50"
+    },
+    {
+      "fieldName": "licensePlate",
+      "fieldType": "String",
+      "fieldValidateRules": ["required", "maxlength"],
+      "fieldValidateRulesMaxlength": "10"
+    },
+    {
+      "fieldName": "vehicleStatus",
+      "fieldType": "VehicleStatus",
+      "fieldValidateRules": ["required"],
+      "fieldValues": "AVAILABLE,MAINTENANCE,OUT_OF_SERVICE"
+    }
+  ],
+  "name": "VehicleInfo",
+  "pagination": "pagination",
+  "relationships": [
+    {
+      "otherEntityName": "vehicleDamage",
+      "otherEntityRelationshipName": "vehicle",
+      "relationshipName": "damages",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "chatBooking",
+      "otherEntityRelationshipName": "vehicle",
+      "relationshipName": "reservations",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "vehicleService",
+      "otherEntityRelationshipName": "vehicle",
+      "relationshipName": "services",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "systemAlert",
+      "otherEntityRelationshipName": "vehicle",
+      "relationshipName": "alerts",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "appDevice",
+      "otherEntityRelationshipName": "vehicle",
+      "relationshipName": "devices",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-many"
+    }
+  ],
+  "searchEngine": "no",
+  "service": "serviceClass"
+}

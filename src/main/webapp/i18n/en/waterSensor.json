@@ -1,0 +1,25 @@
+{
+  "smartiotApp": {
+    "waterSensor": {
+      "home": {
+        "title": "Water Sensors",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Water Sensor",
+        "createOrEditLabel": "Create or edit a Water Sensor",
+        "notFound": "No Water Sensors found"
+      },
+      "created": "A new Water Sensor is created with identifier {{ param }}",
+      "updated": "A Water Sensor is updated with identifier {{ param }}",
+      "deleted": "A Water Sensor is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Water Sensor {{ id }}?"
+      },
+      "detail": {
+        "title": "Water Sensor"
+      },
+      "id": "ID",
+      "sensorId": "Sensor Id",
+      "sensorStatus": "Sensor Status"
+    }
+  }
+}

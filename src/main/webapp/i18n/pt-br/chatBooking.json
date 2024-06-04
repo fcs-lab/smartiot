@@ -1,0 +1,26 @@
+{
+  "smartiotApp": {
+    "chatBooking": {
+      "home": {
+        "title": "Chat Bookings",
+        "refreshListLabel": "Atualizar lista",
+        "createLabel": "Criar novo Chat Booking",
+        "createOrEditLabel": "Criar ou editar Chat Booking",
+        "notFound": "Nenhum Chat Booking encontrado"
+      },
+      "created": "Um novo Chat Booking foi criado com o identificador {{ param }}",
+      "updated": "Um Chat Booking foi atualizado com o identificador {{ param }}",
+      "deleted": "Um Chat Booking foi excluído com o identificador {{ param }}",
+      "delete": {
+        "question": "Tem certeza de que deseja excluir Chat Booking {{ id }}?"
+      },
+      "detail": {
+        "title": "Chat Booking"
+      },
+      "id": "ID",
+      "bookingTimestamp": "Booking Timestamp",
+      "session": "Session",
+      "vehicle": "Vehicle"
+    }
+  }
+}

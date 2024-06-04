@@ -1,0 +1,26 @@
+{
+  "smartiotApp": {
+    "appDevice": {
+      "home": {
+        "title": "App Devices",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new App Device",
+        "createOrEditLabel": "Create or edit a App Device",
+        "notFound": "No App Devices found"
+      },
+      "created": "A new App Device is created with identifier {{ param }}",
+      "updated": "A App Device is updated with identifier {{ param }}",
+      "deleted": "A App Device is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete App Device {{ id }}?"
+      },
+      "detail": {
+        "title": "App Device"
+      },
+      "id": "ID",
+      "deviceId": "Device Id",
+      "deviceType": "Device Type",
+      "vehicle": "Vehicle"
+    }
+  }
+}

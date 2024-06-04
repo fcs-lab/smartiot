@@ -1,0 +1,36 @@
+{
+  "annotations": {
+    "changelogDate": "20240604023202"
+  },
+  "applications": ["smartiot"],
+  "dto": "mapstruct",
+  "fields": [
+    {
+      "fieldName": "serviceName",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "serviceDate",
+      "fieldType": "LocalDate",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "serviceDescription",
+      "fieldType": "String"
+    }
+  ],
+  "name": "VehicleService",
+  "pagination": "pagination",
+  "relationships": [
+    {
+      "otherEntityName": "vehicleInfo",
+      "otherEntityRelationshipName": "services",
+      "relationshipName": "vehicle",
+      "relationshipSide": "right",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "searchEngine": "no",
+  "service": "serviceClass"
+}

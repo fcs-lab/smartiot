@@ -1,0 +1,9 @@
+{
+  "smartiotApp": {
+    "CNHSituation": {
+      "null": "",
+      "VALID": "VALID",
+      "INVALID": "INVALID"
+    }
+  }
+}

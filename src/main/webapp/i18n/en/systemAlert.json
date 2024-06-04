@@ -1,0 +1,28 @@
+{
+  "smartiotApp": {
+    "systemAlert": {
+      "home": {
+        "title": "System Alerts",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new System Alert",
+        "createOrEditLabel": "Create or edit a System Alert",
+        "notFound": "No System Alerts found"
+      },
+      "created": "A new System Alert is created with identifier {{ param }}",
+      "updated": "A System Alert is updated with identifier {{ param }}",
+      "deleted": "A System Alert is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete System Alert {{ id }}?"
+      },
+      "detail": {
+        "title": "System Alert"
+      },
+      "id": "ID",
+      "createdAt": "Created At",
+      "updatedAt": "Updated At",
+      "alertDescription": "Alert Description",
+      "alertType": "Alert Type",
+      "vehicle": "Vehicle"
+    }
+  }
+}

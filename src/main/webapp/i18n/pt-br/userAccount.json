@@ -1,0 +1,65 @@
+{
+  "smartiotApp": {
+    "userAccount": {
+      "home": {
+        "title": "User Accounts",
+        "refreshListLabel": "Atualizar lista",
+        "createLabel": "Criar novo User Account",
+        "createOrEditLabel": "Criar ou editar User Account",
+        "notFound": "Nenhum User Account encontrado"
+      },
+      "created": "Um novo User Account foi criado com o identificador {{ param }}",
+      "updated": "Um User Account foi atualizado com o identificador {{ param }}",
+      "deleted": "Um User Account foi excluído com o identificador {{ param }}",
+      "delete": {
+        "question": "Tem certeza de que deseja excluir User Account {{ id }}?"
+      },
+      "detail": {
+        "title": "User Account"
+      },
+      "id": "ID",
+      "accountName": "Account Name",
+      "emailAddress": "Email Address",
+      "admissionDate": "Admission Date",
+      "createdAt": "Created At",
+      "updatedAt": "Updated At",
+      "isActive": "Is Active",
+      "mobilePhone": "Mobile Phone",
+      "rpushFeedbackId": "Rpush Feedback Id",
+      "execCommands": "Exec Commands",
+      "isBlocked": "Is Blocked",
+      "employerName": "Employer Name",
+      "pushConfiguration": "Push Configuration",
+      "traveledDistance": "Traveled Distance",
+      "language": "Language",
+      "blockedReason": "Blocked Reason",
+      "blockedById": "Blocked By Id",
+      "blockedAt": "Blocked At",
+      "deletedReason": "Deleted Reason",
+      "deletedAt": "Deleted At",
+      "deletedById": "Deleted By Id",
+      "lastModifiedBy": "Last Modified By",
+      "registrationCode": "Registration Code",
+      "password": "Password",
+      "passwordHint": "Password Hint",
+      "featureFlags": "Feature Flags",
+      "zipCode": "Zip Code",
+      "publicPlace": "Public Place",
+      "addressNumber": "Address Number",
+      "streetName": "Street Name",
+      "addressComplement": "Address Complement",
+      "cityName": "City Name",
+      "stateName": "State Name",
+      "cnhImage": "Cnh Image",
+      "profileImage": "Profile Image",
+      "cnhExpirationDate": "Cnh Expiration Date",
+      "cnhStatus": "Cnh Status",
+      "registrationStatus": "Registration Status",
+      "analyzedBy": "Analyzed By",
+      "analyzedAt": "Analyzed At",
+      "signatureImage": "Signature Image",
+      "residenceProofImage": "Residence Proof Image",
+      "applicationUser": "Application User"
+    }
+  }
+}

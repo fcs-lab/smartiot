@@ -1,0 +1,27 @@
+{
+  "smartiotApp": {
+    "chatSession": {
+      "home": {
+        "title": "Chat Sessions",
+        "refreshListLabel": "Atualizar lista",
+        "createLabel": "Criar novo Chat Session",
+        "createOrEditLabel": "Criar ou editar Chat Session",
+        "notFound": "Nenhum Chat Session encontrado"
+      },
+      "created": "Um novo Chat Session foi criado com o identificador {{ param }}",
+      "updated": "Um Chat Session foi atualizado com o identificador {{ param }}",
+      "deleted": "Um Chat Session foi excluído com o identificador {{ param }}",
+      "delete": {
+        "question": "Tem certeza de que deseja excluir Chat Session {{ id }}?"
+      },
+      "detail": {
+        "title": "Chat Session"
+      },
+      "id": "ID",
+      "sessionId": "Session Id",
+      "startTime": "Start Time",
+      "endTime": "End Time",
+      "messages": "Messages"
+    }
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "annotations": {
+    "changelogDate": "20240604023157"
+  },
+  "applications": ["smartiot"],
+  "dto": "mapstruct",
+  "fields": [
+    {
+      "fieldName": "damageDescription",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "reportedAt",
+      "fieldType": "Instant",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "damageStatus",
+      "fieldType": "DamageStatus",
+      "fieldValidateRules": ["required"],
+      "fieldValues": "REPORTED,IN_PROGRESS,FIXED"
+    }
+  ],
+  "name": "VehicleDamage",
+  "pagination": "pagination",
+  "relationships": [
+    {
+      "otherEntityName": "vehicleInfo",
+      "otherEntityRelationshipName": "damages",
+      "relationshipName": "vehicle",
+      "relationshipSide": "right",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "searchEngine": "no",
+  "service": "serviceClass"
+}

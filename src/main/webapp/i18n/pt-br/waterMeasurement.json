@@ -1,0 +1,26 @@
+{
+  "smartiotApp": {
+    "waterMeasurement": {
+      "home": {
+        "title": "Water Measurements",
+        "refreshListLabel": "Atualizar lista",
+        "createLabel": "Criar novo Water Measurement",
+        "createOrEditLabel": "Criar ou editar Water Measurement",
+        "notFound": "Nenhum Water Measurement encontrado"
+      },
+      "created": "Um novo Water Measurement foi criado com o identificador {{ param }}",
+      "updated": "Um Water Measurement foi atualizado com o identificador {{ param }}",
+      "deleted": "Um Water Measurement foi excluído com o identificador {{ param }}",
+      "delete": {
+        "question": "Tem certeza de que deseja excluir Water Measurement {{ id }}?"
+      },
+      "detail": {
+        "title": "Water Measurement"
+      },
+      "id": "ID",
+      "measurementDate": "Measurement Date",
+      "waterLevel": "Water Level",
+      "waterQuality": "Water Quality"
+    }
+  }
+}

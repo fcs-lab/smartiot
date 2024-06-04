@@ -1,0 +1,33 @@
+{
+  "annotations": {
+    "changelogDate": "20240604023123"
+  },
+  "applications": ["smartiot"],
+  "dto": "mapstruct",
+  "fields": [
+    {
+      "fieldName": "deviceId",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "deviceType",
+      "fieldType": "DeviceType",
+      "fieldValidateRules": ["required"],
+      "fieldValues": "GPS,TELEMETRY,OTHER"
+    }
+  ],
+  "name": "AppDevice",
+  "pagination": "pagination",
+  "relationships": [
+    {
+      "otherEntityName": "vehicleInfo",
+      "otherEntityRelationshipName": "devices",
+      "relationshipName": "vehicle",
+      "relationshipSide": "right",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "searchEngine": "no",
+  "service": "serviceClass"
+}

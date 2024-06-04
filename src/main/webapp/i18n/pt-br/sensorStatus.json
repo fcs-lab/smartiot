@@ -1,0 +1,10 @@
+{
+  "smartiotApp": {
+    "SensorStatus": {
+      "null": "",
+      "ACTIVE": "ACTIVE",
+      "INACTIVE": "INACTIVE",
+      "MAINTENANCE": "MAINTENANCE"
+    }
+  }
+}

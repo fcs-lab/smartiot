@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd
+                        http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+    <!--
+        Added the constraints for entity ChatBooking.
+    -->
+    <changeSet id="20240604023126-2" author="jhipster">
+
+        <addForeignKeyConstraint baseColumnNames="session_id"
+                                 baseTableName="chat_booking"
+                                 constraintName="fk_chat_booking__session_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="chat_session"
+                                 />
+
+        <addForeignKeyConstraint baseColumnNames="vehicle_id"
+                                 baseTableName="chat_booking"
+                                 constraintName="fk_chat_booking__vehicle_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="vehicle_info"
+                                 />
+    </changeSet>
+</databaseChangeLog>

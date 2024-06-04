@@ -1,0 +1,31 @@
+{
+  "smartiotApp": {
+    "storageAttachment": {
+      "home": {
+        "title": "Storage Attachments",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Storage Attachment",
+        "createOrEditLabel": "Create or edit a Storage Attachment",
+        "notFound": "No Storage Attachments found"
+      },
+      "created": "A new Storage Attachment is created with identifier {{ param }}",
+      "updated": "A Storage Attachment is updated with identifier {{ param }}",
+      "deleted": "A Storage Attachment is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Storage Attachment {{ id }}?"
+      },
+      "detail": {
+        "title": "Storage Attachment"
+      },
+      "id": "ID",
+      "attachmentName": "Attachment Name",
+      "recordType": "Record Type",
+      "recordId": "Record Id",
+      "createdAt": "Created At",
+      "updatedAt": "Updated At",
+      "lastModifiedBy": "Last Modified By",
+      "blobId": "Blob Id",
+      "deletedAt": "Deleted At"
+    }
+  }
+}

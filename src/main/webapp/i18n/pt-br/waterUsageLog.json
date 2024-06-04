@@ -1,0 +1,25 @@
+{
+  "smartiotApp": {
+    "waterUsageLog": {
+      "home": {
+        "title": "Water Usage Logs",
+        "refreshListLabel": "Atualizar lista",
+        "createLabel": "Criar novo Water Usage Log",
+        "createOrEditLabel": "Criar ou editar Water Usage Log",
+        "notFound": "Nenhum Water Usage Log encontrado"
+      },
+      "created": "Um novo Water Usage Log foi criado com o identificador {{ param }}",
+      "updated": "Um Water Usage Log foi atualizado com o identificador {{ param }}",
+      "deleted": "Um Water Usage Log foi excluído com o identificador {{ param }}",
+      "delete": {
+        "question": "Tem certeza de que deseja excluir Water Usage Log {{ id }}?"
+      },
+      "detail": {
+        "title": "Water Usage Log"
+      },
+      "id": "ID",
+      "usageDate": "Usage Date",
+      "amountUsed": "Amount Used"
+    }
+  }
+}

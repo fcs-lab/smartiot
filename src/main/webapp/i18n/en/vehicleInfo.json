@@ -1,0 +1,31 @@
+{
+  "smartiotApp": {
+    "vehicleInfo": {
+      "home": {
+        "title": "Vehicle Infos",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Vehicle Info",
+        "createOrEditLabel": "Create or edit a Vehicle Info",
+        "notFound": "No Vehicle Infos found"
+      },
+      "created": "A new Vehicle Info is created with identifier {{ param }}",
+      "updated": "A Vehicle Info is updated with identifier {{ param }}",
+      "deleted": "A Vehicle Info is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Vehicle Info {{ id }}?"
+      },
+      "detail": {
+        "title": "Vehicle Info"
+      },
+      "id": "ID",
+      "modelName": "Model Name",
+      "licensePlate": "License Plate",
+      "vehicleStatus": "Vehicle Status",
+      "damages": "Damages",
+      "reservations": "Reservations",
+      "services": "Services",
+      "alerts": "Alerts",
+      "devices": "Devices"
+    }
+  }
+}

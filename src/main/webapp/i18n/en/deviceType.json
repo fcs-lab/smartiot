@@ -1,0 +1,10 @@
+{
+  "smartiotApp": {
+    "DeviceType": {
+      "null": "",
+      "GPS": "GPS",
+      "TELEMETRY": "TELEMETRY",
+      "OTHER": "OTHER"
+    }
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "annotations": {
+    "changelogDate": "20240604023126"
+  },
+  "applications": ["smartiot"],
+  "dto": "mapstruct",
+  "fields": [
+    {
+      "fieldName": "bookingTimestamp",
+      "fieldType": "Instant",
+      "fieldValidateRules": ["required"]
+    }
+  ],
+  "name": "ChatBooking",
+  "pagination": "pagination",
+  "relationships": [
+    {
+      "otherEntityName": "chatSession",
+      "relationshipName": "session",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "vehicleInfo",
+      "otherEntityRelationshipName": "reservations",
+      "relationshipName": "vehicle",
+      "relationshipSide": "right",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "searchEngine": "no",
+  "service": "serviceClass"
+}

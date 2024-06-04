@@ -1,0 +1,56 @@
+{
+  "annotations": {
+    "changelogDate": "20240604023147"
+  },
+  "applications": ["smartiot"],
+  "dto": "mapstruct",
+  "fields": [
+    {
+      "fieldName": "nome",
+      "fieldType": "String",
+      "fieldValidateRules": ["required", "maxlength"],
+      "fieldValidateRulesMaxlength": "100"
+    },
+    {
+      "fieldName": "tipo",
+      "fieldType": "TipoSensor",
+      "fieldValidateRules": ["required"],
+      "fieldValues": "TEMPERATURE,HUMIDITY,PRESSURE"
+    },
+    {
+      "fieldName": "configuracao",
+      "fieldType": "String"
+    }
+  ],
+  "name": "Sensor",
+  "pagination": "pagination",
+  "relationships": [
+    {
+      "otherEntityField": "email",
+      "otherEntityName": "configuracaoAlerta",
+      "otherEntityRelationshipName": "sensor",
+      "relationshipName": "configuracaoAlertas",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityField": "nome",
+      "otherEntityName": "cliente",
+      "otherEntityRelationshipName": "sensores",
+      "relationshipName": "cliente",
+      "relationshipSide": "right",
+      "relationshipType": "many-to-one",
+      "relationshipValidateRules": "required"
+    },
+    {
+      "otherEntityField": "timestamp",
+      "otherEntityName": "dadoSensor",
+      "otherEntityRelationshipName": "sensor",
+      "relationshipName": "dadoSensores",
+      "relationshipSide": "right",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "searchEngine": "no",
+  "service": "serviceClass"
+}

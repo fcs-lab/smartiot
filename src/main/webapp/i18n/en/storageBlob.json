@@ -1,0 +1,33 @@
+{
+  "smartiotApp": {
+    "storageBlob": {
+      "home": {
+        "title": "Storage Blobs",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Storage Blob",
+        "createOrEditLabel": "Create or edit a Storage Blob",
+        "notFound": "No Storage Blobs found"
+      },
+      "created": "A new Storage Blob is created with identifier {{ param }}",
+      "updated": "A Storage Blob is updated with identifier {{ param }}",
+      "deleted": "A Storage Blob is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Storage Blob {{ id }}?"
+      },
+      "detail": {
+        "title": "Storage Blob"
+      },
+      "id": "ID",
+      "fileName": "File Name",
+      "contentType": "Content Type",
+      "byteSize": "Byte Size",
+      "checksum": "Checksum",
+      "createdAt": "Created At",
+      "updatedAt": "Updated At",
+      "lastModifiedBy": "Last Modified By",
+      "key": "Key",
+      "metadata": "Metadata",
+      "deletedAt": "Deleted At"
+    }
+  }
+}

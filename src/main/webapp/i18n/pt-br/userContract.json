@@ -1,0 +1,27 @@
+{
+  "smartiotApp": {
+    "userContract": {
+      "home": {
+        "title": "User Contracts",
+        "refreshListLabel": "Atualizar lista",
+        "createLabel": "Criar novo User Contract",
+        "createOrEditLabel": "Criar ou editar User Contract",
+        "notFound": "Nenhum User Contract encontrado"
+      },
+      "created": "Um novo User Contract foi criado com o identificador {{ param }}",
+      "updated": "Um User Contract foi atualizado com o identificador {{ param }}",
+      "deleted": "Um User Contract foi excluído com o identificador {{ param }}",
+      "delete": {
+        "question": "Tem certeza de que deseja excluir User Contract {{ id }}?"
+      },
+      "detail": {
+        "title": "User Contract"
+      },
+      "id": "ID",
+      "contractName": "Contract Name",
+      "startDate": "Start Date",
+      "endDate": "End Date",
+      "user": "User"
+    }
+  }
+}

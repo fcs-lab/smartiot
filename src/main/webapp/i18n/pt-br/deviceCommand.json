@@ -1,0 +1,27 @@
+{
+  "smartiotApp": {
+    "deviceCommand": {
+      "home": {
+        "title": "Device Commands",
+        "refreshListLabel": "Atualizar lista",
+        "createLabel": "Criar novo Device Command",
+        "createOrEditLabel": "Criar ou editar Device Command",
+        "notFound": "Nenhum Device Command encontrado"
+      },
+      "created": "Um novo Device Command foi criado com o identificador {{ param }}",
+      "updated": "Um Device Command foi atualizado com o identificador {{ param }}",
+      "deleted": "Um Device Command foi excluído com o identificador {{ param }}",
+      "delete": {
+        "question": "Tem certeza de que deseja excluir Device Command {{ id }}?"
+      },
+      "detail": {
+        "title": "Device Command"
+      },
+      "id": "ID",
+      "commandType": "Command Type",
+      "sentAt": "Sent At",
+      "executedAt": "Executed At",
+      "commandStatus": "Command Status"
+    }
+  }
+}

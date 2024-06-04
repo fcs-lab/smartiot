@@ -1,0 +1,25 @@
+{
+  "smartiotApp": {
+    "vehicleGroup": {
+      "home": {
+        "title": "Vehicle Groups",
+        "refreshListLabel": "Atualizar lista",
+        "createLabel": "Criar novo Vehicle Group",
+        "createOrEditLabel": "Criar ou editar Vehicle Group",
+        "notFound": "Nenhum Vehicle Group encontrado"
+      },
+      "created": "Um novo Vehicle Group foi criado com o identificador {{ param }}",
+      "updated": "Um Vehicle Group foi atualizado com o identificador {{ param }}",
+      "deleted": "Um Vehicle Group foi excluído com o identificador {{ param }}",
+      "delete": {
+        "question": "Tem certeza de que deseja excluir Vehicle Group {{ id }}?"
+      },
+      "detail": {
+        "title": "Vehicle Group"
+      },
+      "id": "ID",
+      "groupName": "Group Name",
+      "groupDescription": "Group Description"
+    }
+  }
+}
