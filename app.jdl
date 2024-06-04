@@ -34,267 +34,398 @@ application {
   entities AggregatedData, Alert, AppDevice, ApplicationUser, CarRide, ChatBooking, ChatMessage, ChatSession, ChatUser, Cliente, Company, ConfiguracaoAlerta, Consumer, CostCenter, DadoSensor, DeviceCommand, DeviceTelemetry, Enrollment, GeoLocation, ManualEntry, Measurement, Notification, Payment, Pricing, Report, ResourceGroup, Sensor, StorageAttachment, StorageBlob, SystemAlert, User, UserAccount, UserContract, UserDashboard, UserReport, UserRole, VehicleDamage, VehicleGroup, VehicleInfo, VehicleManufacturer, VehicleModel, VehicleService, VehicleStatusLog, VehicleSubStatus, WaterAlert, WaterMeasurement, WaterSensor, WaterUsageLog
 }
 
-// Entities for Account Management
-entity UserAccount {
-  accountName String required,
-  emailAddress String required pattern(/^[^@]+@[^@]+\\.[^@]+$/),
-  admissionDate LocalDate required,
-  createdAt Instant required,
-  updatedAt Instant required,
-  isActive Boolean required,
-  mobilePhone String,
-  rpushFeedbackId Integer,
-  execCommands Boolean,
-  isBlocked Boolean,
-  employerName String,
-  pushConfiguration Integer,
-  traveledDistance Float,
-  language String,
-  blockedReason String,
-  blockedById Long,
-  blockedAt Instant,
-  deletedReason String,
-  deletedAt Instant,
-  deletedById Long,
-  lastModifiedBy String,
-  registrationCode String,
-  password String required minlength(8),
-  passwordHint String,
-  featureFlags String,
-  zipCode String,
-  publicPlace String,
-  addressNumber String,
-  streetName String,
-  addressComplement String,
-  cityName String,
-  stateName String,
-  cnhImage TextBlob,
-  profileImage TextBlob,
-  cnhExpirationDate LocalDate,
-  cnhStatus CNHSituation,
-  registrationStatus RegisterSituation,
-  analyzedBy String,
-  analyzedAt Instant,
-  signatureImage TextBlob,
-  residenceProofImage TextBlob,
-  customerIds TextBlob,
-  customerId String,
-  firstName String required,
+@ChangelogDate("20240604023121")
+entity AggregatedData {
+  dataType String required
+  value String required
+  aggregationTime ZonedDateTime required
+}
+@ChangelogDate("20240604023122")
+entity Alert {
+  alertType String required
+  description String required
+  createdDate ZonedDateTime required
+}
+@ChangelogDate("20240604023123")
+entity AppDevice {
+  deviceId String required
+  deviceType DeviceType required
+}
+@ChangelogDate("20240604023124")
+entity ApplicationUser {
+  userLogin String required
+  firstName String required
   lastName String required
+  emailAddress String required
 }
-
-// Entities for Storage Management
-entity StorageAttachment {
-  attachmentName String required,
-  recordType String required,
-  recordId Long required,
-  createdAt Instant required,
-  updatedAt Instant required,
-  lastModifiedBy String,
-  blobId Long required,
-  deletedAt Instant
-}
-
-entity StorageBlob {
-  fileName String required,
-  contentType String,
-  byteSize Long required,
-  checksum String required,
-  createdAt Instant required,
-  updatedAt Instant required,
-  lastModifiedBy String,
-  key String required,
-  metadata TextBlob,
-  deletedAt Instant
-}
-
-// Entities for Alerts
-entity SystemAlert {
-  createdAt Instant required,
-  updatedAt Instant,
-  alertDescription String required,
-  alertType String required,
-  severity String required,
-  status AlertStatus required
-}
-
-// Entities for Chat Management
-entity ChatSession {
-  sessionId String required,
-  createdAt Instant required,
-  updatedAt Instant,
-  status ChatContractStatus required
-}
-
-entity ChatMessage {
-  messageContent String required,
-  sender String required,
-  sentAt Instant required,
-  status MessageStatus required
-}
-
-entity ChatUser {
-  userName String required,
-  displayName String,
-  email String required pattern(/^[^@]+@[^@]+\\.[^@]+$/),
-  createdAt Instant required,
-  updatedAt Instant
-}
-
-// Entities for Vehicle Management
-entity VehicleInfo {
-  modelName String required,
-  registrationNumber String required,
-  status VehicleStatus required
-}
-
-entity Sensor {
-  nome String required,
-  deviceType DeviceType required,
-  status SensorStatus required
-}
-
-entity SensorData {
-  timestamp Instant required,
-  value Float required
-}
-
-entity AlertConfiguration {
-  email String required pattern(/^[^@]+@[^@]+\\.[^@]+$/),
-  alertType String required,
-  threshold Float required
-}
-
+@ChangelogDate("20240604023125")
 entity CarRide {
-  startTime Instant required,
-  endTime Instant,
-  startLocation String,
-  endLocation String,
-  distanceTravelled Float,
-  driver String required
+  startTime Instant required
+  endTime Instant required
+  origin String required
+  destination String required
+  availableSeats Integer required
 }
-
-entity UserContract {
-  contractName String required,
-  startDate Instant required,
-  endDate Instant required,
-  status ContractStatus required
-}
-
-entity VehicleService {
-  serviceName String required,
-  serviceDate Instant required,
-  cost Float required,
-  serviceStatus ServiceStatus required
-}
-
+@ChangelogDate("20240604023126")
 entity ChatBooking {
-  bookingId String required,
-  session String required,
-  startTime Instant required,
-  endTime Instant,
-  status ReservationStatus required
+  bookingTimestamp Instant required
 }
-
-entity Customer {
-  nome String required,
-  registrationNumber String required,
-  address String
+@ChangelogDate("20240604023127")
+entity ChatMessage {
+  messageId String required
+  messageContent String required
+  messageTimestamp Instant required
 }
-
+@ChangelogDate("20240604023128")
+entity ChatSession {
+  sessionId String required
+  startTime Instant required
+  endTime Instant
+}
+@ChangelogDate("20240604023129")
+entity ChatUser {
+  userId String required
+  userName String required
+}
+@ChangelogDate("20240604023130")
+entity Cliente {
+  nome String required maxlength(100)
+  email String required pattern(/^[^@\s]+@[^@\s]+\.[^@\s]+$/)
+}
+@ChangelogDate("20240604023131")
+entity Company {
+  name String required
+  address String required
+}
+@ChangelogDate("20240604023132")
+entity ConfiguracaoAlerta {
+  limite BigDecimal
+  email String required pattern(/^[^@\s]+@[^@\s]+\.[^@\s]+$/)
+}
+@ChangelogDate("20240604023133")
+entity Consumer {
+  name String required
+  street String required
+  neighborhood String required
+  propertyNumber Integer required
+  phone String required
+  email String required
+}
+@ChangelogDate("20240604023134")
+entity CostCenter {
+  centerName String required
+  budgetAmount Float required
+}
+@ChangelogDate("20240604023135")
+entity DadoSensor {
+  dados String
+  timestamp Instant
+}
+@ChangelogDate("20240604023136")
+entity DeviceCommand {
+  commandType String required
+  sentAt Instant required
+  executedAt Instant
+  commandStatus CommandStatus required
+}
+@ChangelogDate("20240604023137")
+entity DeviceTelemetry {
+  telemetryTimestamp Instant required
+  latitude Double required
+  longitude Double required
+  speed Float
+  fuelLevel Float
+  engineStatus String
+}
+@ChangelogDate("20240604023138")
+entity Enrollment {
+  enrollmentType String required
+  enrollmentDate ZonedDateTime required
+}
+@ChangelogDate("20240604023139")
+entity GeoLocation {
+  latitude Double required
+  longitude Double required
+  fullAddress String
+}
+@ChangelogDate("20240604023140")
+entity ManualEntry {
+  entryType String required
+  value String required
+  entryDate ZonedDateTime required
+}
+@ChangelogDate("20240604023141")
+entity Measurement {
+  measurementType String required
+  value String required
+  measurementTime ZonedDateTime required
+}
+@ChangelogDate("20240604023142")
+entity Notification {
+  notificationType String required
+  message String required
+  sentDate ZonedDateTime required
+}
+@ChangelogDate("20240604023143")
+entity Payment {
+  amount BigDecimal required
+  paymentDate LocalDate required
+}
+@ChangelogDate("20240604023144")
+entity Pricing {
+  serviceType String required
+  price BigDecimal required
+}
+@ChangelogDate("20240604023145")
+entity Report {
+  reportName String required
+  reportData String required
+}
+@ChangelogDate("20240604023146")
+entity ResourceGroup {
+  name String required
+  description String required
+}
+@ChangelogDate("20240604023147")
+entity Sensor {
+  nome String required maxlength(100)
+  tipo TipoSensor required
+  configuracao String
+}
+@ChangelogDate("20240604023148")
+entity StorageAttachment {
+  attachmentName String required
+  recordType String required
+  recordId Long required
+  createdAt Instant required
+  updatedAt Instant required
+  lastModifiedBy String
+  blobId Long required
+  deletedAt Instant
+}
+@ChangelogDate("20240604023149")
+entity StorageBlob {
+  fileName String required
+  contentType String
+  byteSize Long required
+  checksum String required
+  createdAt Instant required
+  updatedAt Instant required
+  lastModifiedBy String
+  key String required
+  metadata String
+  deletedAt Instant
+}
+@ChangelogDate("20240604023150")
+entity SystemAlert {
+  createdAt Instant required
+  updatedAt Instant
+  alertDescription String required
+  alertType String required
+}
+@ChangelogDate("20240604023151")
+entity User {
+  username String required
+  email String required
+  role String required
+}
+@ChangelogDate("20240604023152")
+entity UserAccount {
+  accountName String required
+  emailAddress String required pattern(/^[^@]+@[^@]+\.[^@]+$/)
+  admissionDate LocalDate required
+  createdAt Instant required
+  updatedAt Instant required
+  isActive Boolean required
+  mobilePhone String
+  rpushFeedbackId Integer
+  execCommands Boolean
+  isBlocked Boolean
+  employerName String
+  pushConfiguration Integer
+  traveledDistance Float
+  language String
+  blockedReason String
+  blockedById Long
+  blockedAt Instant
+  deletedReason String
+  deletedAt Instant
+  deletedById Long
+  lastModifiedBy String
+  registrationCode String
+  password String required minlength(8)
+  passwordHint String
+  featureFlags String
+  zipCode String
+  publicPlace String
+  addressNumber String
+  streetName String
+  addressComplement String
+  cityName String
+  stateName String
+  cnhImage TextBlob
+  profileImage TextBlob
+  cnhExpirationDate LocalDate
+  cnhStatus CNHSituation
+  registrationStatus RegisterSituation
+  analyzedBy String
+  analyzedAt Instant
+  signatureImage TextBlob
+  residenceProofImage TextBlob
+}
+@ChangelogDate("20240604023153")
+entity UserContract {
+  contractName String required
+  startDate Instant required
+  endDate Instant required
+}
+@ChangelogDate("20240604023154")
+entity UserDashboard {
+  dashboardName String required
+  widgets TextBlob required
+}
+@ChangelogDate("20240604023155")
+entity UserReport {
+  reportType String required
+  generatedAt Instant required
+  reportContent TextBlob required
+}
+@ChangelogDate("20240604023156")
+entity UserRole {
+  roleName String required
+}
+@ChangelogDate("20240604023157")
 entity VehicleDamage {
-  damageDescription String required,
-  reportedDate Instant required,
-  fixedDate Instant,
+  damageDescription String required
+  reportedAt Instant required
   damageStatus DamageStatus required
 }
-
-// Enums
-enum VehicleStatus {
-  AVAILABLE, MAINTENANCE, OUT_OF_SERVICE
+@ChangelogDate("20240604023158")
+entity VehicleGroup {
+  groupName String required
+  groupDescription String
 }
-
-enum SensorStatus {
-  ACTIVE, INACTIVE, MAINTENANCE
+@ChangelogDate("20240604023159")
+entity VehicleInfo {
+  modelName String required maxlength(50)
+  licensePlate String required maxlength(10)
+  vehicleStatus VehicleStatus required
 }
-
-enum CommandStatus {
-  PENDING, EXECUTED, FAILED
+@ChangelogDate("20240604023200")
+entity VehicleManufacturer {
+  manufacturerName String required
+  manufacturerCountry String required
 }
-
-enum ReservationStatus {
-  PENDING, CONFIRMED, CANCELLED
+@ChangelogDate("20240604023201")
+entity VehicleModel {
+  modelName String required
 }
-
-enum ChatContractStatus {
-  ACTIVE, INACTIVE, EXPIRED
+@ChangelogDate("20240604023202")
+entity VehicleService {
+  serviceName String required
+  serviceDate LocalDate required
+  serviceDescription String
 }
-
-enum DamageStatus {
-  REPORTED, IN_PROGRESS, FIXED
+@ChangelogDate("20240604023203")
+entity VehicleStatusLog {
+  statusChangeDate Instant required
+  newStatus VehicleStatus required
 }
-
-enum CNHSituation {
-  VALID, INVALID
+@ChangelogDate("20240604023204")
+entity VehicleSubStatus {
+  subStatusName String required
 }
-
-enum RegisterSituation {
-  PRE_REGISTRATION, UNDER_ANALYSIS, APPROVED, DISAPPROVED
+@ChangelogDate("20240604023205")
+entity WaterAlert {
+  alertType String required
+  alertDescription String required
+  createdDate ZonedDateTime required
+}
+@ChangelogDate("20240604023206")
+entity WaterMeasurement {
+  measurementDate Instant required
+  waterLevel Float required
+  waterQuality String
+}
+@ChangelogDate("20240604023207")
+entity WaterSensor {
+  sensorId String required
+  sensorStatus SensorStatus required
+}
+@ChangelogDate("20240604023208")
+entity WaterUsageLog {
+  usageDate Instant required
+  amountUsed Float required
 }
 
 enum DeviceType {
-  GPS, TELEMETRY, OTHER
+  GPS,
+  TELEMETRY,
+  OTHER
 }
-
+enum CommandStatus {
+  PENDING,
+  EXECUTED,
+  FAILED
+}
 enum TipoSensor {
-  TEMPERATURE, HUMIDITY, PRESSURE
+  TEMPERATURE,
+  HUMIDITY,
+  PRESSURE
 }
-
-enum AlertStatus {
-  NEW, IN_PROGRESS, RESOLVED
+enum CNHSituation {
+  VALID,
+  INVALID
 }
-
-enum MessageStatus {
-  SENT, DELIVERED, READ
+enum RegisterSituation {
+  PRE_REGISTRATION,
+  UNDER_ANALYSIS,
+  APPROVED,
+  DISAPPROVED
 }
-
-enum ContractStatus {
-  ACTIVE, INACTIVE, EXPIRED
+enum DamageStatus {
+  REPORTED,
+  IN_PROGRESS,
+  FIXED
 }
-enum ServiceStatus {
-  SCHEDULED, COMPLETED, CANCELLED
+enum VehicleStatus {
+  AVAILABLE,
+  MAINTENANCE,
+  OUT_OF_SERVICE
 }
-
-// Relationships
-relationship ManyToOne {
-  CarRide{driver(firstName)} to UserAccount,
-  VehicleDamage{vehicle(modelName)} to VehicleInfo,
-  ChatBooking{session(sessionId)} to ChatSession,
-  ChatMessage{sender(userName)} to ChatUser
-}
-
-relationship OneToMany {
-  VehicleInfo{damages(damageDescription)} to VehicleDamage{vehicle(modelName)},
-  VehicleInfo{reservations(startTime)} to ChatBooking{vehicle(modelName)},
-  VehicleInfo{services(serviceName)} to VehicleService{vehicle(modelName)},
-  VehicleInfo{alerts(alertDescription)} to SystemAlert{vehicle(modelName)},
-  VehicleInfo{devices(deviceId)} to Sensor{vehicle(modelName)},
-  ChatSession{messages(messageContent)} to ChatMessage{chatSession(sessionId)},
-  Customer{sensores(nome)} to Sensor{customer(nome) required},
-  SensorData{sensor(nome) required} to Sensor{data(timestamp)},
-  Sensor{alertConfigurations(email)} to AlertConfiguration{sensor(nome) required}
-}
-
-relationship ManyToMany {
-  UserContract{user(firstName)} to UserAccount{contracts(contractName)}
+enum SensorStatus {
+  ACTIVE,
+  INACTIVE,
+  MAINTENANCE
 }
 
 relationship OneToOne {
-  UserAccount{user(firstName)} to User with builtInEntity
+  ApplicationUser{user(email)} to User with builtInEntity
+  UserAccount{applicationUser} to ApplicationUser{userAccount}
+}
+relationship OneToMany {
+  ChatSession{messages} to ChatMessage{chatSession}
+  Cliente{sensores(nome)} to Sensor{cliente(nome) required}
+  Consumer{alert} to Alert{consumer}
+  DadoSensor{sensor(nome) required} to Sensor{dadoSensores(timestamp)}
+  Enrollment{measurement} to Measurement{enrollment}
+  Sensor{configuracaoAlertas(email)} to ConfiguracaoAlerta{sensor(nome) required}
+  VehicleInfo{damages} to VehicleDamage{vehicle}
+  VehicleInfo{reservations} to ChatBooking{vehicle}
+  VehicleInfo{services} to VehicleService{vehicle}
+  VehicleInfo{alerts} to SystemAlert{vehicle}
+  VehicleInfo{devices} to AppDevice{vehicle}
+}
+relationship ManyToOne {
+  CarRide{driver} to ApplicationUser
+  ChatBooking{session} to ChatSession
+  ChatMessage{sender} to ChatUser
+}
+relationship ManyToMany {
+  UserContract{user} to ApplicationUser{contracts}
 }
 
-dto * with mapstruct
-paginate * with pagination
-service * with serviceClass
-search * with no
-
+dto AggregatedData, Alert, AppDevice, ApplicationUser, CarRide, ChatBooking, ChatMessage, ChatSession, ChatUser, Cliente, Company, ConfiguracaoAlerta, Consumer, CostCenter, DadoSensor, DeviceCommand, DeviceTelemetry, Enrollment, GeoLocation, ManualEntry, Measurement, Notification, Payment, Pricing, Report, ResourceGroup, Sensor, StorageAttachment, StorageBlob, SystemAlert, User, UserAccount, UserContract, UserDashboard, UserReport, UserRole, VehicleDamage, VehicleGroup, VehicleInfo, VehicleManufacturer, VehicleModel, VehicleService, VehicleStatusLog, VehicleSubStatus, WaterAlert, WaterMeasurement, WaterSensor, WaterUsageLog with mapstruct
+paginate AggregatedData, Alert, AppDevice, ApplicationUser, CarRide, ChatBooking, ChatMessage, ChatSession, ChatUser, Cliente, Company, ConfiguracaoAlerta, Consumer, CostCenter, DadoSensor, DeviceCommand, DeviceTelemetry, Enrollment, GeoLocation, ManualEntry, Measurement, Notification, Payment, Pricing, Report, ResourceGroup, Sensor, StorageAttachment, StorageBlob, SystemAlert, User, UserAccount, UserContract, UserDashboard, UserReport, UserRole, VehicleDamage, VehicleGroup, VehicleInfo, VehicleManufacturer, VehicleModel, VehicleService, VehicleStatusLog, VehicleSubStatus, WaterAlert, WaterMeasurement, WaterSensor, WaterUsageLog with pagination
+service AggregatedData, Alert, AppDevice, ApplicationUser, CarRide, ChatBooking, ChatMessage, ChatSession, ChatUser, Cliente, Company, ConfiguracaoAlerta, Consumer, CostCenter, DadoSensor, DeviceCommand, DeviceTelemetry, Enrollment, GeoLocation, ManualEntry, Measurement, Notification, Payment, Pricing, Report, ResourceGroup, Sensor, StorageAttachment, StorageBlob, SystemAlert, User, UserAccount, UserContract, UserDashboard, UserReport, UserRole, VehicleDamage, VehicleGroup, VehicleInfo, VehicleManufacturer, VehicleModel, VehicleService, VehicleStatusLog, VehicleSubStatus, WaterAlert, WaterMeasurement, WaterSensor, WaterUsageLog with serviceClass
+search AggregatedData, Alert, AppDevice, ApplicationUser, CarRide, ChatBooking, ChatMessage, ChatSession, ChatUser, Cliente, Company, ConfiguracaoAlerta, Consumer, CostCenter, DadoSensor, DeviceCommand, DeviceTelemetry, Enrollment, GeoLocation, ManualEntry, Measurement, Notification, Payment, Pricing, Report, ResourceGroup, Sensor, StorageAttachment, StorageBlob, SystemAlert, User, UserAccount, UserContract, UserDashboard, UserReport, UserRole, VehicleDamage, VehicleGroup, VehicleInfo, VehicleManufacturer, VehicleModel, VehicleService, VehicleStatusLog, VehicleSubStatus, WaterAlert, WaterMeasurement, WaterSensor, WaterUsageLog with no
