@@ -18,17 +18,20 @@ jobs:
       uses: actions/setup-java@v3
       with:
         java-version: '11'
-        distribution: 'temurin' # Specify the distribution (e.g., 'temurin', 'zulu', 'adopt', etc.)
+        distribution: 'temurin' # Specify the distribution
 
     - name: Install JHipster
       run: npm install -g generator-jhipster
 
     - name: Import JDL
-      run: jhipster import-jdl app.jdl
+      run: |
+        set -x
+        jhipster import-jdl app.jdl
       env:
         JHIPSTER_SKIP_CLIENT: true # Set to false if client generation is needed
 
     - name: Commit and Push Changes
+      if: success()
       run: |
         git config --global user.name 'github-actions[bot]'
         git config --global user.email 'github-actions[bot]@users.noreply.github.com'
