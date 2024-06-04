@@ -20,13 +20,10 @@ jobs:
         java-version: '11'
         distribution: 'temurin' # Specify the distribution
 
-    - name: Install JHipster
-      run: npm install -g generator-jhipster
-
     - name: Import JDL
       run: |
         set -x
-        jhipster import-jdl app.jdl
+        npx generator-jhipster import-jdl app.jdl --force
       env:
         JHIPSTER_SKIP_CLIENT: true # Set to false if client generation is needed
 
